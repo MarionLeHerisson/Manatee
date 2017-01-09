@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Techniques AJAX - XDomainRequest</title>
+    <script type="text/javascript">
+    <!-- 
+
+    function getXDomainRequest() {
+            var xdr = null;
+            
+            if (window.XDomainRequest) {
+                    xdr = new XDomainRequest(); 
+            } else if (window.XMLHttpRequest) {
+                    xdr = new XMLHttpRequest(); 
+            } else {
+                    alert("Votre navigateur ne gère pas l'AJAX cross-domain !");
+            }
+            
+            return xdr;        
+    }
+
+
+    function sendData() {
+            var xdr = getXDomainRequest();
+            xdr.onload = function() {
+                    alert(xdr.responseText);
+            };
+            
+            xdr.open("GET", "https://www.youtube.com/watch?v=pS-gbqbVd8c");
+            xdr.send();
+    }
+     
+    //-->
+    </script>
+</head>
+<body>
+    <p>
+        <input type="button" onclick="sendData()" value="go">
+    </p>
+</body>
+</html>
