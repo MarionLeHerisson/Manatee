@@ -1,0 +1,4 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteRule	^home$	    Application/View/home.php	    [L]
